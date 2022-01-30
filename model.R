@@ -47,7 +47,7 @@ test_x  <- subset(test, select = c(text))
 test_y  <- subset(test, select = c(intent))
   
 # Create and train tokenizer (only with train dataset for a more "real" evaluation)
-tokenizer <- text_tokenizer(num_words = 100, filters = "", lower = FALSE,   #eee lower
+tokenizer <- text_tokenizer(num_words = 100, filters = "", lower = TRUE,   
                             split = " ", char_level = FALSE, oov_token = 'oov')
   
 tokenizer %>% fit_text_tokenizer(train_x$text)
